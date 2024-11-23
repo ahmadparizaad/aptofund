@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Rocket, Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
-import WalletConnect from '../stores/useWalletConnection'
+import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
+// import WalletConnect from '../stores/useWalletConnection'
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
             </Link>
             <ThemeToggle />
              
-              <WalletConnect />
+              <WalletSelector />
             
           </div>
 
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
                 About
               </Link>
               
-              <WalletConnect />
+              <WalletSelector />
             </div>
           </motion.div>
         )}
