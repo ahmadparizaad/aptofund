@@ -1,6 +1,6 @@
-# Micro Funding - Frontend  
+# AptoFund - Fund the Fututre of Innovation
 
-The frontend for the **Micro Funding** platform, a decentralized crowdfunding application on the Aptos blockchain. This platform allows project creators to raise funds and achieve milestones while enabling contributors to have a say in the fund release process and share in project rewards as the project grows.
+The **AptoFund** platform, a decentralized crowdfunding application on the Aptos blockchain. This platform allows project creators to raise funds and achieve milestones while enabling contributors to have a say in the fund release process and share in project rewards as the project grows.
 
 ---
 
@@ -27,8 +27,3 @@ The frontend for the **Micro Funding** platform, a decentralized crowdfunding ap
 Ensure you have the following installed on your system:  
 - [Node.js](https://nodejs.org/)  
 - [Aptos Wallet](https://aptos.dev/ecosystem/wallets/)  
-
-### Clone the Repository  
-```bash
-git clone https://github.com/ahmadparizaad/micro-funding-frontend.git
-cd micro-funding-frontend
