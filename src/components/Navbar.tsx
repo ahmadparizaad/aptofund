@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <Rocket className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-              <span className="font-bold text-xl dark:text-white">LaunchPad</span>
+              <span className="font-bold text-xl dark:text-white">AptoFund</span>
             </Link>
           </div>
 

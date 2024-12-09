@@ -36,7 +36,8 @@ export const CreateStartup: React.FC = () => {
       throw new Error("Unable to find account to sign transaction")
   }
     console.log(data);
-    
+    setIsSubmitting(true);
+
     const videoFile = data.videoUrl[0];
     console.log(videoFile);
     
@@ -84,14 +85,13 @@ export const CreateStartup: React.FC = () => {
       console.log("Failed to upload on IPFS", error);
   }
     try {
-      setIsSubmitting(true);
       const payload = {
         type: 'entry_function_payload',
         function: `${APTOS_CONFIG.moduleAddress}::StartupsMicroFunding::create_startup`,
         type_arguments: [],
         arguments: [
           account.address,
-           data.fundingGoal
+          data.fundingGoal
         ],
       };
       const response = await signAndSubmitTransaction(payload);
@@ -189,10 +189,10 @@ export const CreateStartup: React.FC = () => {
                   <div className="relative">
                     <input
                       type="number"
-                      step="0.01"
+                      step="1"
                       {...register('fundingGoal', { 
                         required: 'Funding goal is required',
-                        min: { value: 0.01, message: 'Minimum funding goal is 0.01 APT' }
+                        min: { value: 1, message: 'Minimum funding goal is 1 APT' }
                       })}
                       className="w-full pl-4 pr-12 py-2 bg-gray-200 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="0.00"
